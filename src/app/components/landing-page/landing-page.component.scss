@@ -1,0 +1,37 @@
+@keyframes slideInFromLeft {
+    0% {
+        transform: translate(-100%);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideInFromRight {
+    0% {
+        transform: translate(0);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+.paragraph {
+    align-items: center;
+}
+
+.heading {
+    font-size: 50px
+}
+
+.first-line {
+    animation: 1s ease-out 0s 1 slideInFromLeft;
+}
+
+.second-line {
+    animation: 1s ease-out 0s 1 slideInFromRight;
+}
+
+span {
+    color: #FF4D5A;
+}
