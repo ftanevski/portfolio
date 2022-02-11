@@ -10,6 +10,18 @@ export class NavbarComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
+      let navbar = document.querySelector('.navbar') as HTMLElement;
+      let topOfNav = navbar.offsetTop;
+
+      function fixNav() {
+          if (window.scrollY >= topOfNav) {
+              navbar.classList.add('fixed-top');
+          } else {
+              navbar.classList.remove('fixed-top');
+          }
+        }
+      
+      window.addEventListener('scroll', fixNav);
   }
 
 }
