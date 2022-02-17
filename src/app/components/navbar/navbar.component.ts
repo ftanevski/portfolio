@@ -12,6 +12,7 @@ export class NavbarComponent implements OnInit {
   ngOnInit(): void {
       let navbar = document.querySelector('.navbar') as HTMLElement;
       let topOfNav = navbar.offsetTop;
+      let sliderSwitch = document.querySelector('.checkbox') as HTMLElement;
 
       function fixNav() {
           if (window.scrollY >= topOfNav) {
@@ -21,7 +22,22 @@ export class NavbarComponent implements OnInit {
           }
         }
       
-      window.addEventListener('scroll', fixNav);
+        function changeTheme() {
+            let body = document.querySelector('body');
+            if (body.className === "dark-theme") {
+                body.className = "light-theme";
+                navbar.classList.remove('nav-dark');
+                navbar.classList.add('nav-light');
+            } else {
+                body.className = "dark-theme";
+                navbar.classList.remove('nav-light');
+                navbar.classList.add('nav-dark');
+            }
+        }
+
+        window.addEventListener('scroll', fixNav);
+        sliderSwitch.addEventListener('change', changeTheme);
   }
 
+  
 }

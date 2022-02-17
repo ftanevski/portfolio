@@ -4,6 +4,8 @@ import { platformBrowserDynamic } from '@angular/platform-browser-dynamic';
 import { AppModule } from './app/app.module';
 import { environment } from './environments/environment';
 import * as Particles from './assets/js/particles.js'
+import { BoundElementProperty } from '@angular/compiler';
+import { BrowserDynamicTestingModule } from '@angular/platform-browser-dynamic/testing';
 
 if (environment.production) {
     enableProdMode();
@@ -17,6 +19,6 @@ window.onload = function () {
         selector: '.background',
         color: '#4D99D9',
         connectParticles: true,
-        maxParticles: 200
+        maxParticles: 150
     });
 };

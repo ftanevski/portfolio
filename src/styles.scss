@@ -8,7 +8,16 @@ html, body {
 
 body {
     font-family: 'Montserrat', sans-serif;
+}
+
+.light-theme {
+    background-color: #EEEEEE;
+    color: #1A1A1A;
+}
+
+.dark-theme {
     background-color: #1A1A1A;
+    color: #EEEEEE;
 }
 
 .background {
