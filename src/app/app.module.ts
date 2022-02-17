@@ -6,6 +6,7 @@ import { NavbarComponent } from './components/navbar/navbar.component';
 import { LandingPageComponent } from './components/landing-page/landing-page.component';
 import { AboutComponent } from './components/about/about.component';
 import { ProjectsComponent } from './components/projects/projects.component';
+import { ProjectsCardComponent } from './components/projects-card/projects-card.component';
 
 @NgModule({
   declarations: [
@@ -13,7 +14,8 @@ import { ProjectsComponent } from './components/projects/projects.component';
     NavbarComponent,
     LandingPageComponent,
     AboutComponent,
-    ProjectsComponent
+    ProjectsComponent,
+    ProjectsCardComponent
   ],
   imports: [
     BrowserModule
