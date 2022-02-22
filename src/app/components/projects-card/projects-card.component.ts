@@ -7,7 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ProjectsCardComponent implements OnInit {
     projects = [
-        {   src: '../../../assets/images/logos/ebec.png', 
+        {   src: '/portfolio/assets/images/logos/ebec.png', 
             title: 'EBEC', 
             description: `European BEST Engineering Competition, or EBEC for short is a competition intended to encourage creative
                          thinking, and solve complex problems. The competition takes place in three rounds, them being Local, 
@@ -16,7 +16,7 @@ export class ProjectsCardComponent implements OnInit {
             link: 'https://ebec.best.org.mk'
         },
         {
-            src: '../../../assets/images/logos/jobfair.png',
+            src: '/portfolio/assets/images/logos/jobfair.png',
             title: 'JobFair',
             description: '',
             link: 'https://vjobfair.org.mk'
