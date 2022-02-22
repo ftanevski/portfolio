@@ -24,14 +24,23 @@ export class NavbarComponent implements OnInit {
       
         function changeTheme() {
             let body = document.querySelector('body');
+            let card = document.querySelector('.card');
             if (body.className === "dark-theme") {
                 body.className = "light-theme";
                 navbar.classList.remove('nav-dark');
                 navbar.classList.add('nav-light');
+                card.classList.remove('bg-dark');
+                card.classList.remove('text-light');
+                card.classList.add('bg-light');
+                card.classList.add('text-dark');
             } else {
                 body.className = "dark-theme";
                 navbar.classList.remove('nav-light');
                 navbar.classList.add('nav-dark');
+                card.classList.remove('bg-light');
+                card.classList.remove('text-dark');
+                card.classList.add('bg-dark');
+                card.classList.add('text-light');
             }
         }
 
