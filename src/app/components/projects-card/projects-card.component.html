@@ -2,14 +2,14 @@
     <div class="card bg-dark text-light mb-3">
         <div class="row g-0">
             <div class="col">
-                <img src={{projects[0].src}} class="img-fluid rounded-start" alt="...">
+                <img src={{project.src}} class="img-fluid rounded-start" alt="...">
             </div>
             <div class="col d-flex flex-column justify-content-center align-items-center">
-                <h5 class="card-title">{{projects[0].title}}</h5>
+                <h5 class="card-title">{{project.title}}</h5>
                 <div class="row">
                     <div class="col">
-                        <a href={{projects[0].link}} target="_blank">
-                            <button type="button" class="btn btn-primary">
+                        <a href={{project.link}} target="_blank">
+                            <button type="button" class="btn">
                                 Website
                             </button>
                         </a>
@@ -18,14 +18,14 @@
                         <a target="_blank">
                             <button 
                                 type="button" 
-                                class="btn btn-primary" 
+                                class="btn" 
                                 data-bs-toggle="modal" 
                                 data-bs-target="#exampleModal"
                             >
                                 More
                             </button>
+                            <app-modal [project]="project"></app-modal>
                         </a>
-                        <app-modal [project]="projects"></app-modal>
                     </div>
                 </div>
             </div>

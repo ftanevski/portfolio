@@ -1,6 +1,6 @@
 <section id="projects" class="container-fluid d-flex justify-content-center p-5 mt-5">
     <h1 class="heading fw-bold p-2">Projects</h1>
 </section>
-<div class="container w-75">
-    <app-projects-card></app-projects-card>
+<div class="container w-75" *ngFor="let project of projects; let i = index;">
+    <app-projects-card [project]="project"></app-projects-card>
 </div>

@@ -1,4 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
+import { Project } from 'src/app/models/Project';
 
 @Component({
     selector: 'app-modal',
@@ -6,7 +7,7 @@ import { Component, OnInit, Input } from '@angular/core';
     styleUrls: ['./modal.component.scss']
 })
 export class ModalComponent implements OnInit {
-    @Input() project = [];
+    @Input() project: Project;
 
     constructor() { }
 
