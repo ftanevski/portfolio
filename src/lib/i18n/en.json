@@ -1,0 +1,65 @@
+{
+	"nav": {
+		"home": "Home",
+		"about": "About",
+		"experience": "Experience",
+		"projects": "Projects",
+		"certifications": "Certifications",
+		"contact": "Contact"
+	},
+	"hero": {
+		"cta": {
+			"projects": "View My Work",
+			"contact": "Get In Touch"
+		}
+	},
+	"about": {
+		"title": "About Me",
+		"placeholder": "Add your about text in Sanity CMS to tell visitors about yourself."
+	},
+	"experience": {
+		"title": "Experience",
+		"tabs": {
+			"fulltime": "Full Time",
+			"internship": "Internships",
+			"education": "Education"
+		},
+		"current": "Present",
+		"viewAll": "View Full Resume"
+	},
+	"projects": {
+		"title": "Projects",
+		"viewSite": "Visit Site",
+		"viewRepo": "View Repository",
+		"viewAll": "View All Projects",
+		"technologies": "Technologies"
+	},
+	"certifications": {
+		"title": "Certifications",
+		"empty": "No certifications yet. Add some from the CMS!"
+	},
+	"contact": {
+		"title": "Contact",
+		"emailMe": "Email me at",
+		"form": {
+			"name": "Your Name",
+			"email": "Your Email",
+			"message": "Your Message",
+			"send": "Send Message",
+			"sending": "Sending...",
+			"success": "Message sent successfully!",
+			"error": "Failed to send message. Please try again."
+		}
+	},
+	"footer": {
+		"builtWith": "Built with",
+		"by": "by",
+		"author": "Filip Tanevski"
+	},
+	"common": {
+		"loading": "Loading...",
+		"error": "Something went wrong",
+		"retry": "Try Again",
+		"backToHome": "Back to Home"
+	}
+}

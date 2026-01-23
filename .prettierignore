@@ -1,0 +1,18 @@
+# Package manager
+node_modules
+package-lock.json
+
+# Build output
+.svelte-kit
+build
+dist
+
+# Sanity
+sanity/node_modules
+
+# Cache
+.cache
+
+# Environment
+.env
+.env.*
