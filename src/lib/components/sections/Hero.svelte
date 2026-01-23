@@ -178,14 +178,6 @@
 		}
 	}
 
-	.hero-greeting {
-		color: var(--color-primary-500);
-		font-size: 1rem;
-		font-weight: 500;
-		margin-bottom: 0.5rem;
-		letter-spacing: 0.05em;
-	}
-
 	.hero-name {
 		font-size: clamp(2.5rem, 6vw, 4rem);
 		font-weight: 700;

@@ -337,7 +337,7 @@
 	}
 
 	.nav-link.active {
-		color: var(--color-primary-500);
+		color: var(--color-primary-400);
 	}
 
 	/* Desktop Controls */
@@ -511,7 +511,7 @@
 	}
 
 	.mobile-nav-link.active {
-		color: var(--color-primary-500);
+		color: var(--color-primary-400);
 		background-color: var(--bg-tertiary);
 	}
 
