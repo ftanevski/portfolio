@@ -16,10 +16,6 @@
 	let windowWidth = $state(1024);
 	let activeSection = $state('home');
 
-	// Get LinkedIn URL from social links
-	const linkedinUrl = $derived(
-		settings?.socialLinks?.find((link) => link.platform === 'linkedin')?.url || '/'
-	);
 
 	const navItems = [
 		{ href: '#home', key: 'nav.home' },
@@ -144,13 +140,14 @@
 
 <header class="navbar">
 	<div class="navbar-container">
-		<!-- Logo - links to LinkedIn -->
-		<a
-			href={linkedinUrl}
+		<!-- Logo - scrolls to top -->
+		<button
 			class="logo"
-			target={linkedinUrl !== '/' ? '_blank' : undefined}
-			rel={linkedinUrl !== '/' ? 'noopener noreferrer' : undefined}
-			onclick={() => closeMenu()}
+			onclick={() => {
+				closeMenu();
+				window.scrollTo({ top: 0, behavior: 'smooth' });
+			}}
+			aria-label="Scroll to top"
 		>
 			<svg class="logo-icon" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
 				<defs>
@@ -167,7 +164,7 @@
 				<!-- T letter - right side, overlapping slightly -->
 				<path d="M22 12H38V17H33V36H28V17H22V12Z" fill="white" opacity="0.85" />
 			</svg>
-		</a>
+		</button>
 
 		<!-- Desktop Navigation -->
 		<nav class="desktop-nav">
@@ -211,7 +208,14 @@
 
 	<div class="mobile-menu {menuPanelClass()}">
 		<div class="mobile-menu-header">
-			<a href="/" class="logo" onclick={() => closeMenu()} aria-label="Home">
+			<button
+				class="logo"
+				onclick={() => {
+					closeMenu();
+					window.scrollTo({ top: 0, behavior: 'smooth' });
+				}}
+				aria-label="Scroll to top"
+			>
 				<svg class="logo-icon" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
 					<defs>
 						<linearGradient id="logoGradientMobile" x1="0%" y1="0%" x2="100%" y2="100%">
@@ -224,7 +228,7 @@
 					<path d="M10 12H24V17H15V21H22V26H15V36H10V12Z" fill="white" />
 					<path d="M22 12H38V17H33V17H33V36H28V17H22V12Z" fill="white" opacity="0.85" />
 				</svg>
-			</a>
+			</button>
 			<button class="close-button" onclick={closeMenu} aria-label="Close menu">
 				<svg
 					xmlns="http://www.w3.org/2000/svg"
@@ -297,6 +301,10 @@
 		z-index: 1001;
 		display: flex;
 		align-items: center;
+		background: none;
+		border: none;
+		padding: 0;
+		cursor: pointer;
 	}
 
 	.logo-icon {
