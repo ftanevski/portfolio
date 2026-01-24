@@ -465,6 +465,12 @@
 		border-bottom: 1px solid var(--border-primary);
 	}
 
+	/* Hide drawer logo when in half-screen mode to avoid duplicate logos */
+	/* Using visibility instead of display to maintain spacing/alignment */
+	.mobile-menu.half-screen .mobile-menu-header .logo {
+		visibility: hidden;
+	}
+
 	.close-button {
 		display: flex;
 		align-items: center;
