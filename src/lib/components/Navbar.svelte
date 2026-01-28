@@ -262,7 +262,7 @@
 		</nav>
 
 		<div class="mobile-controls">
-			<LanguageSwitcher />
+			<LanguageSwitcher dropup={true} />
 			<ThemeToggle />
 		</div>
 	</div>

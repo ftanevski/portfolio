@@ -1,6 +1,12 @@
 <script lang="ts">
 	import { locale, locales, setLocale } from '$lib/i18n';
 
+	interface Props {
+		dropup?: boolean;
+	}
+
+	let { dropup = false }: Props = $props();
+
 	let isOpen = $state(false);
 
 	function toggleDropdown() {
@@ -65,7 +71,7 @@
 	</button>
 
 	{#if isOpen}
-		<ul class="dropdown" role="listbox">
+		<ul class="dropdown" class:dropup role="listbox">
 			{#each locales as loc}
 				<li role="option" aria-selected={$locale === loc.code}>
 					<button
@@ -158,10 +164,27 @@
 		animation: fadeIn 0.15s ease-out;
 	}
 
+	.dropdown.dropup {
+		top: auto;
+		bottom: calc(100% + 4px);
+		animation: fadeInUp 0.15s ease-out;
+	}
+
 	@keyframes fadeIn {
 		from {
 			opacity: 0;
 			transform: translateY(-4px);
+		}
+		to {
+			opacity: 1;
+			transform: translateY(0);
+		}
+	}
+
+	@keyframes fadeInUp {
+		from {
+			opacity: 0;
+			transform: translateY(4px);
 		}
 		to {
 			opacity: 1;
